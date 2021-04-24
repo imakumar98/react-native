@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Text } from 'react-native'
 
 export default function Profile() {
@@ -12,7 +12,8 @@ export default function Profile() {
             const json = await response.json();
 
             setPosts(json);
-        } catch(e) {
+
+        } catch (e) {
             console.log(e);
         }
     }, []);
@@ -21,13 +22,12 @@ export default function Profile() {
         <>
             <Text>Here is the profile page</Text>
 
-            {posts.map((post, index) => {
+            { posts.map((post, index) => {
                 return (
-
                     <Text>Hi</Text>
                 )
-            })}}
+            })}
         </>
-        
+
     )
 }
